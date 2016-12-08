@@ -172,9 +172,8 @@ module.exports = class Cache {
     let {ignoreMethod} = options
     let r = isReq(request) ? request : new Request(request)
 
-    if (!['GET', 'HEAD'].includes(r.method) && ignoreMethod) {
-      return resolve(false)
-    }
+    if (!['GET', 'HEAD'].includes(r.method) && ignoreMethod)
+      return false
   }
 
   // Returns a Promise that resolves to an array of Cache keys.
