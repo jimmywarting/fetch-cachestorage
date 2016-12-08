@@ -1,0 +1,38 @@
+{
+  "name": "fetch-cachestorage",
+  "version": "1.0.0-alpha",
+  "description": "html5 CacheStorage for node",
+  "main": "cache.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "fs-extra": "^1.0.0"
+  },
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2"
+  },
+  "scripts": {
+    "test": "mocha --harmony-async-await test/test.js",
+    "report": "istanbul cover _mocha -- -R spec test/test.js",
+    "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && codecov -f coverage/coverage.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jimmywarting@github.com/jimmywarting/fetch-cachestorage.git"
+  },
+  "keywords": [
+    "fetch",
+    "cache",
+    "storage",
+    "cachestorage"
+  ],
+  "author": "Jimmy Wärting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimmywarting/fetch-cachestorage/issues"
+  },
+  "homepage": "https://github.com/jimmywarting/fetch-cachestorage#readme"
+}
