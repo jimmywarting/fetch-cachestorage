@@ -6,6 +6,6 @@ html5 CacheStorage for node
 Experimental stage...
 Requires node > v6 with --harmony-async-await flag for now...
 
-Documentation: 
-https://developer.mozilla.org/en-US/docs/Web/API/Cache
+Documentation: <br>
+https://developer.mozilla.org/en-US/docs/Web/API/Cache<br>
 https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage
