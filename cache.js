@@ -1,4 +1,4 @@
-const map = new WeakMap()
+const map = new WeakMap();
 const wm = o => map.get(o)
 const fetch = require('node-fetch')
 const fs = require('fs-extra')
@@ -127,10 +127,11 @@ module.exports = class Cache {
     if (res.status === 206)
       throw new TypeError('Partial response (status code 206) is unsupported')
 
-    let varyHeaders = res.headers.getAll('Vary')
+    const varyHeaders = res.headers.get('Vary');
 
-    if (varyHeaders.includes('*'))
-      throw new TypeError('Vary header contains *')
+    if (varyHeaders && varyHeaders.indexOf('*') > -1) {
+        throw new TypeError('Vary header contains *')
+    }
 
     if (res.body != null)
       if (res.bodyUsed)
